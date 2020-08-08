@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\ControleCamera.cs" />
     <Compile Include="Assets\Scripts\FimTileComportamento.cs" />
     <Compile Include="Assets\Scripts\JogadorComportamento.cs" />
+    <Compile Include="Assets\Scripts\MenuPauseComp.cs" />
+    <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\ObstaculoComp.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

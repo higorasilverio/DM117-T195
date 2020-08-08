@@ -107,3 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoEspera: 2
+  explosao: {fileID: 2730719222328912186, guid: 22e8ef1ae3b1f214a8008c758348464d,
+    type: 3}
