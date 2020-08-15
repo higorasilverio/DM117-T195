@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Advertisements;
+using UnityEngine.UI;
+
 /// <summary>
 /// Classe para controlar a parte principal do jogo
 /// </summary>
@@ -24,6 +27,12 @@ public class ControladorJogo : MonoBehaviour
     [Range(1, 4)]
     public int numTileSemOBS = 4;
 
+    [Tooltip("Pontuação da partida corrente")]
+    public static int pontuacaoAtual;
+
+    [Tooltip("Maior pontuação consegiuda no jogo")]
+    public static int maiorPontuacao;
+
     /// <summary>
     /// Local para spawn do próximo tile
     /// </summary>
@@ -37,6 +46,7 @@ public class ControladorJogo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Advertisement.Initialize("2586157");
 
         proxTilePos = pontoInicial;
         proxTileRot = Quaternion.identity;
@@ -70,6 +80,14 @@ public class ControladorJogo : MonoBehaviour
             {
                 //Adiciona na lista como potência ponto de spawn de obstaculo
                 pontosObstaculos.Add(filho.gameObject);
+                
+                pontuacaoAtual = pontuacaoAtual + 100;
+
+                if (pontuacaoAtual > maiorPontuacao)
+                {
+                    maiorPontuacao = pontuacaoAtual;
+                }
+
             }
         }
 
@@ -92,6 +110,10 @@ public class ControladorJogo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var textPontuacaoGame = GameObject.Find("Canvas").transform.Find("ScoreGame").transform.Find("TextPontuaçãoGame").GetComponentInChildren<Text>();
+        textPontuacaoGame.text = System.String.Format("{0}", pontuacaoAtual);
+
+        var textMaiorPontuacao = GameObject.Find("Canvas").transform.Find("ScoreGlobal").transform.Find("TextPontuaçãoGlobal").GetComponentInChildren<Text>();
+        textMaiorPontuacao.text = System.String.Format("{0}", maiorPontuacao);
     }
 }

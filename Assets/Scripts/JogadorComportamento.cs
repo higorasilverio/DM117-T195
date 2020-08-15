@@ -56,7 +56,6 @@ public class JogadorComportamento : MonoBehaviour
 
         //Verificar para qual lado o jogador deseja esquivar
         var velocidadeHorizontal = Input.GetAxis("Horizontal") * velocidadeEsquiva;
-        print(velocidadeHorizontal);
 
 #if UNITY_STANDALONE || UNITY_EDITOR || UNITY_WEBPLAYER
 

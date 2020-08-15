@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 8973236938640939892}
   - component: {fileID: 8973236938640939893}
   - component: {fileID: 8973236938640939898}
+  - component: {fileID: 3189118402431101113}
   m_Layer: 0
   m_Name: ParedeEsc
   m_TagString: Untagged
@@ -271,6 +272,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3189118402431101113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973236938640939899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa5360f4de3d7242ba27efc008eacc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8973236938660312703
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +427,7 @@ GameObject:
   - component: {fileID: 8973236939786453097}
   - component: {fileID: 8973236939786453102}
   - component: {fileID: 8973236939786453103}
+  - component: {fileID: 8612359574701973911}
   m_Layer: 0
   m_Name: ParedeDir
   m_TagString: Untagged
@@ -495,3 +509,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8612359574701973911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973236939786453100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa5360f4de3d7242ba27efc008eacc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
