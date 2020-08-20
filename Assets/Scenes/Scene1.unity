@@ -1814,7 +1814,7 @@ MonoBehaviour:
   obstaculo: {fileID: 7559785528491262789, guid: 8cd508ee3a992ac4080de67732f47a4f,
     type: 3}
   pontoInicial: {x: 0, y: 0, z: -5}
-  numSpawnIni: 20
+  numSpawnIni: 15
   numTileSemOBS: 4
 --- !u!4 &916809840
 Transform:

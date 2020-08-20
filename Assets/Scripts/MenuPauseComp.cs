@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuPauseComp : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class MenuPauseComp : MonoBehaviour
     /// </summary>
     public void Restart()
     {
+        ControladorJogo.pontuacaoAtual = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

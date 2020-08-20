@@ -169,6 +169,11 @@ public class ObstaculoComp : MonoBehaviour
     public void ObjetoTocado()
     {
 
+        if (ControladorJogo.pontuacaoAtual >= 150)
+        {
+            ControladorJogo.pontuacaoAtual -= 125;
+        }    
+
         if (explosao != null)
         {
             //Cria um efeito de explosão

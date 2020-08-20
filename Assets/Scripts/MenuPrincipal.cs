@@ -23,7 +23,8 @@ public class MenuPrincipal : MonoBehaviour
     /// <param name="nomeScene">Nome da scene que será carregada</param>
     public void CarregaScene(string nomeScene)
     {
-        
+
+        ControladorJogo.pontuacaoAtual = 0;
 
         if (UnityAdControle.showAds)
         {

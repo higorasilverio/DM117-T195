@@ -27,11 +27,11 @@ public class ControladorJogo : MonoBehaviour
     [Range(1, 4)]
     public int numTileSemOBS = 4;
 
-    [Tooltip("Pontuação da partida corrente")]
-    public static int pontuacaoAtual;
-
-    [Tooltip("Maior pontuação consegiuda no jogo")]
+    [Tooltip("Maior pontuação conseguida no jogo")]
     public static int maiorPontuacao;
+
+    [Tooltip("Pontuação da partida corrente")]
+    public static int pontuacaoAtual = 0;
 
     /// <summary>
     /// Local para spawn do próximo tile
@@ -80,13 +80,6 @@ public class ControladorJogo : MonoBehaviour
             {
                 //Adiciona na lista como potência ponto de spawn de obstaculo
                 pontosObstaculos.Add(filho.gameObject);
-                
-                pontuacaoAtual = pontuacaoAtual + 100;
-
-                if (pontuacaoAtual > maiorPontuacao)
-                {
-                    maiorPontuacao = pontuacaoAtual;
-                }
 
             }
         }
@@ -110,10 +103,6 @@ public class ControladorJogo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var textPontuacaoGame = GameObject.Find("Canvas").transform.Find("ScoreGame").transform.Find("TextPontuaçãoGame").GetComponentInChildren<Text>();
-        textPontuacaoGame.text = System.String.Format("{0}", pontuacaoAtual);
-
-        var textMaiorPontuacao = GameObject.Find("Canvas").transform.Find("ScoreGlobal").transform.Find("TextPontuaçãoGlobal").GetComponentInChildren<Text>();
-        textMaiorPontuacao.text = System.String.Format("{0}", maiorPontuacao);
+        
     }
 }
