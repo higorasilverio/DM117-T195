@@ -28,7 +28,7 @@ public class ControladorJogo : MonoBehaviour
     public int numTileSemOBS = 4;
 
     [Tooltip("Maior pontuação conseguida no jogo")]
-    public static int maiorPontuacao;
+    public static int maiorPontuacao = 0;
 
     [Tooltip("Pontuação da partida corrente")]
     public static int pontuacaoAtual = 0;
@@ -49,6 +49,9 @@ public class ControladorJogo : MonoBehaviour
         Advertisement.Initialize("2586157");
 
         proxTilePos = pontoInicial;
+        var textMaiorPontuacao = GameObject.Find("Canvas").transform.Find("ScoreGlobal").transform.Find("TextPontuaçãoGlobal").GetComponentInChildren<Text>();
+        textMaiorPontuacao.text = System.String.Format("{0}", ControladorJogo.maiorPontuacao);
+
         proxTileRot = Quaternion.identity;
 
         for (int i = 0; i < numSpawnIni; i++)

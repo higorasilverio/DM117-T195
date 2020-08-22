@@ -18,6 +18,7 @@ public class MenuPauseComp : MonoBehaviour
     public void Restart()
     {
         ControladorJogo.pontuacaoAtual = 0;
+        ObstaculoComp.velocidadeRolamento = 0.5f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

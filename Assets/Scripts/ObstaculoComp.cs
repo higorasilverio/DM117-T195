@@ -8,10 +8,12 @@ using UnityEngine.UI;
 public class ObstaculoComp : MonoBehaviour
 {
     [Tooltip("Quanto tempo antes de reiniciar o jogo")]
-    public float tempoEspera = 2.0f;
+    public float tempoEspera = 0.1f;
 
     [Tooltip("Particle System da explosão")]
     public GameObject explosao;
+
+    public static float velocidadeRolamento = 0.5f;
 
     /// <summary>
     /// Variavel referencia para o jogador
@@ -135,13 +137,15 @@ public class ObstaculoComp : MonoBehaviour
 
     }
 
+    [Obsolete]
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
+        if (MenuPauseComp.pausado || GetGameOverMenu().active)
+            return;
+        
+        //if (Input.GetMouseButton(0))
             TocarObjetos(Input.mousePosition);
-        }
     }
 
     /// <summary>
@@ -169,10 +173,7 @@ public class ObstaculoComp : MonoBehaviour
     public void ObjetoTocado()
     {
 
-        if (ControladorJogo.pontuacaoAtual >= 150)
-        {
-            ControladorJogo.pontuacaoAtual -= 125;
-        }    
+        velocidadeRolamento += 0.2f;
 
         if (explosao != null)
         {

@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BatidaParedes.cs" />
+    <Compile Include="Assets\Scripts\ChaoComp.cs" />
     <Compile Include="Assets\Scripts\ControladorJogo.cs" />
     <Compile Include="Assets\Scripts\ControleCamera.cs" />
     <Compile Include="Assets\Scripts\FimTileComportamento.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Scripts\MusicaControle.cs" />
     <Compile Include="Assets\Scripts\ObstaculoComp.cs" />
     <Compile Include="Assets\Scripts\UnityAdControle.cs" />
+    <Compile Include="Assets\Scripts\shareComp.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -635,7 +637,16 @@
       <HintPath>D:/Unity-Aula/DM117-T195/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NativeShare.Editor.csproj">
+      <Project>{80E4F448-B4AB-DAFD-A4C0-D45B703F91A6}</Project>
+      <Name>NativeShare.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeShare.Runtime.csproj">
+      <Project>{2B1ED798-BF29-DCEE-EF9B-5599AB499BEB}</Project>
+      <Name>NativeShare.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

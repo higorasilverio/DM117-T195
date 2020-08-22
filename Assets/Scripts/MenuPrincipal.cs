@@ -26,6 +26,8 @@ public class MenuPrincipal : MonoBehaviour
 
         ControladorJogo.pontuacaoAtual = 0;
 
+        ObstaculoComp.velocidadeRolamento = 0.5f;
+
         if (UnityAdControle.showAds)
         {
             //Mostra um anuncio

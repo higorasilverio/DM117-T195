@@ -87,7 +87,7 @@ public class JogadorComportamento : MonoBehaviour
         }
 #endif
 
-        var forcaMovimento = new Vector3(velocidadeHorizontal, 0, velocidadeRolamento);
+        var forcaMovimento = new Vector3(velocidadeHorizontal, 0, ObstaculoComp.velocidadeRolamento);
         //Time.delta nos retorna o tempo gasto no frame anterior
         //Algo em torno de 1/60fds
         //Usamos esse valor para garantir que o nosso jogador se desloque com a mesma velocidade
